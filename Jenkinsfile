@@ -98,7 +98,7 @@ rocmtest clang_debug: rocmnode('vega') { cmake_build ->
     }
 }, clang_release: rocmnode('vega') { cmake_build ->
     stage('Hip Clang Release') {
-        cmake_build("/opt/rocm/llvm/bin/clang++", "-DCMAKE_BUILD_TYPE=release")
+        cmake_build("/opt/rocm/llvm/bin/clang++", "-DCMAKE_BUILD_TYPE=release -DMIGRAPHX_ENABLE_CPU=On")
         stash includes: 'build/*.deb', name: 'migraphx-package'
     }
 }, hcc_debug: rochccmnode('vega') { cmake_build ->
