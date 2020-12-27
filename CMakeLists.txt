@@ -74,65 +74,65 @@ rocm_enable_clang_tidy(
         modernize-*
         performance-*
         readability-*
-        -bugprone-signed-char-misuse
-        -bugprone-macro-parentheses
-        # Disable the aliased reserved identifiers
-        -cert-dcl37-c
-        -cert-dcl51-cpp
-        # Disable all alpha checks by default
-        -clang-analyzer-alpha*
-        # Enable some alpha checks
-        clang-analyzer-alpha.core.CallAndMessageUnInitRefArg
-        clang-analyzer-alpha.core.Conversion
-        clang-analyzer-alpha.core.IdenticalExpr
-        clang-analyzer-alpha.core.PointerArithm
-        clang-analyzer-alpha.core.PointerSub
-        clang-analyzer-alpha.core.TestAfterDivZero
-        clang-analyzer-alpha.cplusplus.InvalidIterator
-        clang-analyzer-alpha.cplusplus.IteratorRange
-        clang-analyzer-alpha.cplusplus.MismatchedIterator
-        clang-analyzer-alpha.cplusplus.MisusedMovedObject
-        -clang-analyzer-optin.performance.Padding
-        -clang-diagnostic-deprecated-declarations
-        -clang-diagnostic-extern-c-compat
-        -clang-diagnostic-disabled-macro-expansion
-        -clang-diagnostic-unused-command-line-argument
-        -cppcoreguidelines-explicit-virtual-functions
-        -cppcoreguidelines-init-variables
-        -cppcoreguidelines-pro-bounds-array-to-pointer-decay
-        -cppcoreguidelines-pro-bounds-constant-array-index
-        -cppcoreguidelines-pro-bounds-pointer-arithmetic
-        -cppcoreguidelines-pro-type-member-init
-        -cppcoreguidelines-pro-type-reinterpret-cast
-        -cppcoreguidelines-pro-type-union-access
-        -cppcoreguidelines-pro-type-vararg
-        -cppcoreguidelines-special-member-functions
-        -google-readability-*
-        -google-runtime-int
-        -google-runtime-references
-        -misc-macro-parentheses
-        -misc-no-recursion
-        -modernize-concat-nested-namespaces
-        -modernize-pass-by-value
-        -modernize-use-default-member-init
-        -modernize-use-nodiscard
-        -modernize-use-override
-        -modernize-use-trailing-return-type
-        -modernize-use-transparent-functors
-        -performance-type-promotion-in-math-fn
-        -readability-braces-around-statements
-        -readability-convert-member-functions-to-static
-        -readability-else-after-return
-        -readability-named-parameter
-        -readability-redundant-string-init
-        -readability-uppercase-literal-suffix
-        -*-avoid-c-arrays
-        -*-explicit-constructor
-        -*-magic-numbers
-        -*-non-private-member-variables-in-classes
-        -*-use-auto
-        -*-use-emplace
-        -*-use-equals-default
+        # -bugprone-signed-char-misuse
+        # -bugprone-macro-parentheses
+        # # Disable the aliased reserved identifiers
+        # -cert-dcl37-c
+        # -cert-dcl51-cpp
+        # # Disable all alpha checks by default
+        # -clang-analyzer-alpha*
+        # # Enable some alpha checks
+        # clang-analyzer-alpha.core.CallAndMessageUnInitRefArg
+        # clang-analyzer-alpha.core.Conversion
+        # clang-analyzer-alpha.core.IdenticalExpr
+        # clang-analyzer-alpha.core.PointerArithm
+        # clang-analyzer-alpha.core.PointerSub
+        # clang-analyzer-alpha.core.TestAfterDivZero
+        # clang-analyzer-alpha.cplusplus.InvalidIterator
+        # clang-analyzer-alpha.cplusplus.IteratorRange
+        # clang-analyzer-alpha.cplusplus.MismatchedIterator
+        # clang-analyzer-alpha.cplusplus.MisusedMovedObject
+        # -clang-analyzer-optin.performance.Padding
+        # -clang-diagnostic-deprecated-declarations
+        # -clang-diagnostic-extern-c-compat
+        # -clang-diagnostic-disabled-macro-expansion
+        # -clang-diagnostic-unused-command-line-argument
+        # -cppcoreguidelines-explicit-virtual-functions
+        # -cppcoreguidelines-init-variables
+        # -cppcoreguidelines-pro-bounds-array-to-pointer-decay
+        # -cppcoreguidelines-pro-bounds-constant-array-index
+        # -cppcoreguidelines-pro-bounds-pointer-arithmetic
+        # -cppcoreguidelines-pro-type-member-init
+        # -cppcoreguidelines-pro-type-reinterpret-cast
+        # -cppcoreguidelines-pro-type-union-access
+        # -cppcoreguidelines-pro-type-vararg
+        # -cppcoreguidelines-special-member-functions
+        # -google-readability-*
+        # -google-runtime-int
+        # -google-runtime-references
+        # -misc-macro-parentheses
+        # -misc-no-recursion
+        # -modernize-concat-nested-namespaces
+        # -modernize-pass-by-value
+        # -modernize-use-default-member-init
+        # -modernize-use-nodiscard
+        # -modernize-use-override
+        # -modernize-use-trailing-return-type
+        # -modernize-use-transparent-functors
+        # -performance-type-promotion-in-math-fn
+        # -readability-braces-around-statements
+        # -readability-convert-member-functions-to-static
+        # -readability-else-after-return
+        # -readability-named-parameter
+        # -readability-redundant-string-init
+        # -readability-uppercase-literal-suffix
+        # -*-avoid-c-arrays
+        # -*-explicit-constructor
+        # -*-magic-numbers
+        # -*-non-private-member-variables-in-classes
+        # -*-use-auto
+        # -*-use-emplace
+        # -*-use-equals-default
     ${MIGRAPHX_TIDY_ERRORS}
     HEADER_FILTER
         ".*hpp"
@@ -157,18 +157,18 @@ rocm_enable_cppcheck(
         performance
         portability
     SUPPRESS 
-        ConfigurationNotChecked
-        unmatchedSuppression
-        unusedFunction
-        noExplicitConstructor
-        passedByValue
-        unusedStructMember
-        functionStatic
-        functionConst:*program.*
-        shadowFunction
-        shadowVar
-        shadowVariable
-        unsafeClassDivZero
+        # ConfigurationNotChecked
+        # unmatchedSuppression
+        # unusedFunction
+        # noExplicitConstructor
+        # passedByValue
+        # unusedStructMember
+        # functionStatic
+        # functionConst:*program.*
+        # shadowFunction
+        # shadowVar
+        # shadowVariable
+        # unsafeClassDivZero
         definePrefix:*test/include/test.hpp
     FORCE
     INCONCLUSIVE
