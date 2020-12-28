@@ -231,7 +231,4 @@ jobs:
         lcov --list $(pwd)/coverage.info
         curl -s https://codecov.io/bash | bash
         echo "Uploaded"
-        
-
-
 
