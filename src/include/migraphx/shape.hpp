@@ -148,7 +148,7 @@ struct shape
 
         type operator()() const { return {}; }
 
-        std::size_t size(std::size_t n = 1) const { return sizeof(type) * n; }
+        const std::size_t size(std::size_t n = 1) const { return sizeof(type) * n; }
 
         template <class U>
         type* from(U* buffer, std::size_t n = 0) const
@@ -162,7 +162,7 @@ struct shape
             return reinterpret_cast<const type*>(buffer) + n;
         }
 
-        type_t type_enum() const { return get_type<type>{}; }
+        const type_t type_enum() const { return get_type<type>{}; }
     };
 
     template <class Visitor>
